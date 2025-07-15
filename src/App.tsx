@@ -7,6 +7,8 @@ function App() {
   const [expression, setExpression] = useState("");
   const [result, setResult] = useState("");
 
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
   const handleButtonClick = (value: string) => {
     if (value === "AC") {
       setExpression("");
@@ -25,8 +27,8 @@ function App() {
     }
   };
   return (
-    <main className="calculator-app">
-      <ToggleSwitch />
+    <main className={`calculator-app ${isDarkMode ? "dark" : "light"}`}>
+      <ToggleSwitch isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <div className="calculator-display">
         <div className="display-contents">
           <input
