@@ -23,7 +23,10 @@ function App() {
         setResult("Error");
       }
     } else {
-      setExpression((prev) => prev + value);
+      if (result) {
+        setExpression(value);
+        setResult("");
+      } else setExpression((prev) => prev + value);
     }
   };
   return (

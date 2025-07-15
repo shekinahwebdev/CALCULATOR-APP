@@ -192,6 +192,10 @@ body {
   background-color: rgb(247, 247, 247);
 }
 
+.calculator-app.light .btn:hover {
+  background-color: rgba(235, 234, 234, 0.997);
+}
+
 .btn.active {
   background-color: rgb(53, 55, 64);
 }
