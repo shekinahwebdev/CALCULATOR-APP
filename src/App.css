@@ -1,1 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tagesschrift&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap");
 
+:root {
+  --Red-400: hsl(7, 99%, 70%);
+  --Green-500-footer: hsl(167, 34%, 41%);
+  --White: hsl(0, 100%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.calculator-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  background-color: rgb(35, 37, 44);
+  padding: 2rem 0rem 0rem 0rem;
+  border-radius: 20px;
+}
+
+.toggle-switch {
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  padding: 0.8rem 0.9rem;
+  border-radius: 20px;
+}
+
+.calculator-display {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 150px;
+  height: 300px;
+  width: 100%;
+  background-color: #1e1e1e;
+  margin-top: 1rem;
+  background-color: rgb(35, 37, 44);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+}
+
+.display-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.expression-input {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  text-align: right;
+  width: 100%;
+  text-align: right;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.result {
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
+  font-weight: bold;
+  color: var(--White);
+  width: 100%;
+  text-align: right;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem 0rem 1.5rem 2rem;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: rgb(43, 45, 54);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.button {
+  border: none;
+  background-color: rgb(41, 43, 50);
+  color: var(--White);
+  font-size: 1.5rem;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  box-shadow: 10px 5px 10px rgb(42, 45, 51);
+}
+
+.button:hover {
+  background-color: rgb(53, 55, 64);
+  cursor: pointer;
+}
+
+.button-operator-right {
+  color: rgba(239, 74, 65, 0.787);
+}
+
+.button-operator-first {
+  color: rgb(121, 240, 213);
+}
